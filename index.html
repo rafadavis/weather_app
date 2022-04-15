@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>What clothes should I wear to run?</title>
+    <meta name="description" content="A simple app that will suggest the 
+                appropriate clothes to run depending on the temperature.">
+    <meta name="autor" content="Rafael Davis Portela">
+  </head>
+  <body>
+    <h1>Running clothes app</h1>
+    <label for="zipcode">Zip Code</label>
+    <input type="text" id="zipcode" name="zipcode">
+    <button type="submit">Submit</button>
+    <div>
+    </div>
+    <script>
+      const btn = document.querySelector('button');
+      function test() {
+
+	  const para = document.createElement('p');
+	  const div = document.querySelector('div');
+      while(div.firstChild){
+          div.removeChild(div.firstChild);
+      }
+	  const input = document.querySelector('input');
+	  const zip = input.value;
+
+	  if (zip === "11377") {
+	      para.textContent = "My old house";
+	  } else if (zip === "11226") {
+	      para.textContent = "My new place";
+	  } else {
+	      para.textContent = "I don't recognize this place";
+	  }
+	  div.appendChild(para);
+      }
+
+      btn.addEventListener('click', test);
+
+    </script>
+  </body>
+</html>

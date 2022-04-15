@@ -1,0 +1,15 @@
+* example of api call
+http://api.openweathermap.org/data/2.5/forecast?zip={zip code}&appid={API key}
+
+* my api key
+bc64d8909608b860393fbdaade941faf
+
+* links
+- https://openweathermap.org/forecast5#format
+- [[file:index.html][index.html]]
+-
+
+* TODO move all js code to main.js
+
+* TODO learn how to request web data with js
+
