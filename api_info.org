@@ -9,7 +9,10 @@ bc64d8909608b860393fbdaade941faf
 - [[file:index.html][index.html]]
 -
 
-* TODO move all js code to main.js
+* DONE move all js code to main.js
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-04-15 Fri 10:33]
+:END:
 
 * TODO learn how to request web data with js
 
