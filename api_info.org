@@ -7,12 +7,32 @@ bc64d8909608b860393fbdaade941faf
 * links
 - https://openweathermap.org/forecast5#format
 - [[file:index.html][index.html]]
--
+- [[https://bithacker.dev/fetch-weather-openweathermap-api-javascript][all I really need in terms of api is here]]
 
 * DONE move all js code to main.js
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2022-04-15 Fri 10:33]
 :END:
 
-* TODO learn how to request web data with js
+* DONE learn how to request web data with js
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-04-16 Sat 11:40]
+:END:
+** This is the base of using the api
+#+begin_src javascript
+  const url = "http://api.openweathermap.org/data/2.5/forecast?zip=11226&appid=bc64d8909608b860393fbdaade941faf"
+  fetch(url)
+  .then(data=>{return data.json()})
+  .then(res=>{console.log(res)})
+#+end_src
+** DONE need to use [[*links][link above]]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-04-16 Sat 11:40]
+:END:
+In order to use the data in a function that will manipulate the DOM
+** TODO start working on clothes div
+*** TODO get data from site, store it in variables
+*** TODO can I have dictionaries that work with range?
+** TODO convert kelving to celsius
+** TODO insert realfeel
 
