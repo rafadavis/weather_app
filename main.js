@@ -1,3 +1,4 @@
+import {downhillToDowntown, link} from "./dtd.js";
 const btn = document.querySelector('button');
 
 function drawWeather( d ) {
@@ -46,16 +47,16 @@ function toFahrenheit( k ) {
 function drawClothes( d ) {
     var f = toFahrenheit(d.main.temp)
     var clothes = document.getElementById("clothes");
-    if (f < 30) {
-        var dress = "dress like it's below 30"
-    } else if (f < 50) {
-        var dress = "dress like it's between 30 and 50"
-    } else if (f < 70) {
-        var dress = "dress like it's btw 50 and 70"
-    } else {
-        var dress = "more than 70"
-    }
-    console.log(dress);
+    var dress = downhillToDowntown(f); 
+//    if (f < 30) {
+//        var dress = "dress like it's below 30"
+//    } else if (f < 50) {
+//        var dress = "dress like it's between 30 and 50"
+//    } else if (f < 70) {
+//        var dress = "dress like it's btw 50 and 70"
+//    } else {
+//        var dress = "more than 70"
+//    }
     clothes.textContent += dress;
 }
 
