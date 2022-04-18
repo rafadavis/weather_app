@@ -1,4 +1,4 @@
-import {downhillToDowntown, link} from "./dtd.js";
+//import {downhillToDowntown, link} from "./dtd.js";
 const btn = document.querySelector('button');
 
 function drawWeather( d ) {
@@ -24,7 +24,7 @@ function request(){
     .then(function(resp) {return resp.json() })
     .then(function(data) {
         drawWeather(data);
-        drawClothes(data);
+        //drawClothes(data);
     })
     .catch(function() {
     });
