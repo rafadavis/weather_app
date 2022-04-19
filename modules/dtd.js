@@ -1,4 +1,4 @@
-export const link = "https://downhilltodowntown.com/what-to-wear/";
+export const dtdLink = "https://downhilltodowntown.com/what-to-wear/";
 
 export function downhillToDowntown ( w ) {
     const f = 51;

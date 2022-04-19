@@ -1,13 +1,8 @@
 import {drawWeather} from "./weather.js";
 import {drawClothes} from "./clothes.js";
 export function request(){
-    var main = document.getElementById("main");
-    while(div.firstChild){
-        console.log(div.firstChild.textContent);
-        div.removeChild(div.firstChild);
-    }
-    //var zipCode = document.querySelector('input').value;
-    var zipCode = 11226;
+    var zipCode = document.querySelector('input').value;
+    // var zipCode = 11226; // only when testing
     var key = 'bc64d8909608b860393fbdaade941faf';
     fetch('http://api.openweathermap.org/data/2.5/weather?zip='
         + zipCode + '&appid=' + key)
