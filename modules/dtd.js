@@ -2,8 +2,6 @@ export const link = "https://downhilltodowntown.com/what-to-wear/";
 
 export function downhillToDowntown ( w ) {
     const f = 51;
-    console.log(`f = ${f}`);
-    console.log(typeof(f));
     var c = "";
     if (f > 90) {
         var c = t90
@@ -22,7 +20,6 @@ export function downhillToDowntown ( w ) {
     } else {
         var c = "No info"
     }
-    console.log(`c = ${c}`);
     return c;
 }
 

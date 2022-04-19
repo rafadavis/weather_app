@@ -1,6 +1,5 @@
 import {toCelsius, toFahrenheit} from "./conversions.js";
 export function drawWeather( d ) {
-    console.log(d);
     var desc = document.getElementById('description');
     var temp = document.getElementById('temp');
     var loc = document.getElementById('location');
