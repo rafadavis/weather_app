@@ -47,3 +47,15 @@ In order to use the data in a function that will manipulate the DOM
 :END:
 *** CANCELLED insert realfeel
 
+* TODO COMMENT
+Right now the clothes div is not erasing when I run the event again.
+One solution is to check for the existence of the div with the class. If it exists, var clothes will be the getelement. If it doesn't, reassign var clothes to create element.
+
+`var isMobileVersion = document.getElementsByClassName('snake--mobile');
+if (isMobileVersion.length > 0) {
+    // elements with class "snake--mobile" exist
+    // length is only more than zero if it actually exists
+}
+`
+
+Other option is to make css visible vs invisible, and return the div to html, instead of creating it on javascript. It is probably the best way to do it, since mozilla tutorial did it that way.

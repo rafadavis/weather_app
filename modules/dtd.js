@@ -1,7 +1,6 @@
 export const dtdLink = "https://downhilltodowntown.com/what-to-wear/";
 
-export function downhillToDowntown ( w ) {
-    const f = 51;
+export function downhillToDowntown ( f ) {
     var c = "";
     if (f > 90) {
         var c = t90
