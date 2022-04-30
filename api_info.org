@@ -1,61 +1,7 @@
-* example of api call
-http://api.openweathermap.org/data/2.5/forecast?zip={zip code}&appid={API key}
-
-* my api key
-bc64d8909608b860393fbdaade941faf
-
-* links
-- https://openweathermap.org/forecast5#format
-- [[file:index.html][index.html]]
-- [[https://bithacker.dev/fetch-weather-openweathermap-api-javascript][all I really need in terms of api is here]]
-
 * todo's
-** TODO remove div's from html file, and create them in the appropriate js files
-I want to have only the main div in the html. So that any css will only show up as they are created.
-** TODO do css by value: show temperature as blue if cold, black if normal, red if hot.
-
-** DONE move all js code to main.js
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2022-04-15 Fri 10:33]
-:END:
-** DONE learn how to request web data with js
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2022-04-16 Sat 11:40]
-:END:
-*** This is the base of using the api
-#+begin_src javascript
-  const url = "http://api.openweathermap.org/data/2.5/forecast?zip=11226&appid=bc64d8909608b860393fbdaade941faf"
-  fetch(url)
-  .then(data=>{return data.json()})
-  .then(res=>{console.log(res)})
-#+end_src
-*** DONE need to use [[*links][link above]]
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2022-04-16 Sat 11:40]
-:END:
-In order to use the data in a function that will manipulate the DOM
-*** TODO start working on clothes div
-**** DONE get data from site, store it in variables
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2022-04-19 Tue 09:18]
-- State "DONE"       from "TODO"       [2022-04-19 Tue 09:17]
-:END:
-**** CANCELLED can I have dictionaries that work with range?
-*** DONE convert kelving to celsius
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2022-04-19 Tue 09:18]
-:END:
-*** CANCELLED insert realfeel
-
-* TODO COMMENT
-Right now the clothes div is not erasing when I run the event again.
-One solution is to check for the existence of the div with the class. If it exists, var clothes will be the getelement. If it doesn't, reassign var clothes to create element.
-
-`var isMobileVersion = document.getElementsByClassName('snake--mobile');
-if (isMobileVersion.length > 0) {
-    // elements with class "snake--mobile" exist
-    // length is only more than zero if it actually exists
-}
-`
-
-Other option is to make css visible vs invisible, and return the div to html, instead of creating it on javascript. It is probably the best way to do it, since mozilla tutorial did it that way.
+** hiding api key
+- [[https://stackoverflow.com/questions/57330728/how-to-use-netlify-lambda-functions-to-hide-api-key][using netlify with vanilla js to store api key]]
+  - [[https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html][explaining exports.handler]]
+- Netlify docs about serverless functions and environment variables
+  - [[https://docs.netlify.com/functions/build-with-javascript/][build serverless functions]]
+  - [[https://docs.netlify.com/configure-builds/environment-variables/][build environment variables]]

@@ -4,8 +4,7 @@ import {drawClothes} from "./clothes.js";
 export function request(key){
     var zipCode = document.querySelector('input').value;
     // var zipCode = 11226; // only when testing
-    fetch('http://api.openweathermap.org/data/2.5/weather?zip='
-        + zipCode + '&appid=' + key)
+    fetch(`/.netlify/functions/request?zip=${zipCode}`)
     .then(function(resp) {return resp.json() })
     .then(function(data) {
         drawWeather(data);
@@ -14,5 +13,4 @@ export function request(key){
     .catch(function() {
     });
 }
-
 
