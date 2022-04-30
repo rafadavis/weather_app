@@ -2,7 +2,7 @@ import {draw} from "/modules/draw.js";
 
 const btn = document.querySelector('button');
 btn.addEventListener('click', function() {
-    request();
+    draw();
 });
 
 zipcode.addEventListener("keyup", function(event) {
